@@ -32,6 +32,13 @@ body {
     gap: 10px;
 }
 
+@media (max-width: 768px) {
+    .stacked-images {
+        display: none;
+        /* Hide stacked images on mobile */
+    }
+}
+
 .stacked-image {
     position: relative;
     width: 80px;
@@ -43,6 +50,13 @@ body {
     opacity: 0;
     animation: fadeIn 0.5s forwards;
     border: 2px solid white;
+}
+
+@media (max-width: 768px) {
+    .stacked-image {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .stacked-image:nth-child(1) {
@@ -130,6 +144,13 @@ body {
     visibility: visible;
 }
 
+@media (max-width: 768px) {
+    .flower-animation-container {
+        z-index: 4;
+        /* Place flower animation behind the card on mobile */
+    }
+}
+
 /* PHONG BÌ */
 .envelope {
     position: relative;
@@ -142,6 +163,18 @@ body {
     cursor: pointer;
     transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform-origin: bottom;
+}
+
+.flower-animation-container {
+    z-index: 11;
+    /* Flower animation in front of envelope */
+}
+
+@media (max-width: 768px) {
+    .envelope {
+        width: 90%;
+        height: 250px;
+    }
 }
 
 .envelope:hover {
@@ -433,7 +466,8 @@ body:not(.roses-growing) .rose {
 .container {
     perspective: 1500px;
     position: absolute;
-    z-index: 5;
+    z-index: 12;
+    /* Card in front of flower animation and envelope */
     opacity: 0;
     transform: translateY(50px) scale(0.7);
     pointer-events: none;
@@ -453,6 +487,15 @@ body.card-out .container {
     height: 600px;
     position: relative;
     transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90vw;
+        height: 80vh;
+        max-width: 400px;
+        max-height: 500px;
+    }
 }
 
 .card-face {
@@ -607,6 +650,12 @@ body.card-out .container {
     animation: titlePulse 2s ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+    .title {
+        font-size: 48px;
+    }
+}
+
 @keyframes titlePulse {
 
     0%,
@@ -627,6 +676,12 @@ body.card-out .container {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     letter-spacing: 2px;
     animation: fadeInUp 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    .subtitle {
+        font-size: 16px;
+    }
 }
 
 .click-hint {
@@ -760,6 +815,12 @@ body.card-out .container {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .message-title {
+        font-size: 1.8rem;
+    }
+}
+
 .message-container {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
@@ -797,6 +858,12 @@ body.card-out .container {
     z-index: 1;
     margin-bottom: 30px;
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .message {
+        font-size: 16px;
+    }
 }
 
 .greeting {
