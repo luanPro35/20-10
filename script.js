@@ -13,7 +13,7 @@ let flowerAnimationData = null;
 let flowerAnimationInstance = null;
 
 // Tải dữ liệu animation hoa
-fetch("Flower Animation.json")
+fetch("flowerAnimation.json")
   .then((response) => response.json())
   .then((data) => {
     flowerAnimationData = data;
